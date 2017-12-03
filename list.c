@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "List.h"
+#include "list.h"
 
 void list_init(List *list, void (*destroy)(void *data)) {
     list->size = 0;
