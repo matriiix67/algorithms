@@ -16,6 +16,18 @@ int main(int argc, char* argv[])
 
     sort.select_sort(ivec);
 
+    cout << "selection sort result: ";
+    for(int e : ivec) {
+        cout << e << " ";
+    }
+    cout << endl;
+
+    // insertion sort
+    ivec = {9, 1, 2, 6, 4, 7, 8, 3, 5};
+
+    sort.insert_sort(ivec);
+
+    cout << "insertion sort result: ";
     for(int e : ivec) {
         cout << e << " ";
     }
