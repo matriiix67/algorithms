@@ -10,3 +10,5 @@ add_executable(test_stack test_stack.c stack.h stack.c)
 add_executable(test_queue test_queue.c queue.h queue.c)
 add_executable(test_chtbl.c chtbl.c chtbl.h)
 add_executable(test_ohtbl.c ohtbl.h ohtbl.c)
+
+add_executable(test_sort.c sort.h sort.c)
