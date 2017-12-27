@@ -14,9 +14,16 @@ int main(int argc, char* argv[])
     ilist.push_front(19);
     ilist.push_front(20);
     ilist.push_front(21);
-    ilist.push_front(22);
+    ilist.push_front(22).push_front(23);
+
+    ilist.remove(1);
+
+    cout << ilist.find(19) << endl;
 
     cout << ilist.pop_front() << endl;
     cout << ilist.pop_front() << endl;
+    cout << ilist.pop_front() << endl;
+    cout << ilist.pop_front() << endl;
+
     return 0;
 }
