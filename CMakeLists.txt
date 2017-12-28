@@ -8,7 +8,7 @@ add_executable(test_stack test_stack.cpp stack.h)
 add_executable(test_queue test_queue.cpp queue.h)
 add_executable(test_bag test_bag.cpp bag.h)
 
-add_executable(test_sort test_sort.cpp Sort.h Sort.cpp)
+add_executable(test_sort test_sort.cpp sort.h)
 add_executable(test_graph test_graph.cpp Graph.h Graph.cpp)
 add_executable(test_depth_first_paths test_depth_first_paths.cpp DepthFirstPaths.h DepthFirstPaths.cpp Graph.h Graph.cpp)
 add_executable(test_bst test_bst.cpp binary_search_tree.h binary_search_tree.cpp)

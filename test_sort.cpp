@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-#include "Sort.h"
+#include "sort.h"
 
 using namespace std;
 
@@ -12,9 +12,9 @@ int main(int argc, char* argv[])
 {
     std::cout << "hello, world!" << std::endl;
     vector<int> ivec = {9, 1, 2, 6, 4, 7, 8, 3, 5};
-    Sort sort;
+    Sort<int> sort;
 
-    sort.select_sort(ivec);
+    sort.selection_sort(ivec);
 
     cout << "selection sort result: ";
     for(int e : ivec) {
@@ -24,8 +24,7 @@ int main(int argc, char* argv[])
 
     // insertion sort
     ivec = {9, 1, 2, 6, 4, 7, 8, 3, 5};
-
-    sort.insert_sort(ivec);
+    sort.insertion_sort(ivec);
 
     cout << "insertion sort result: ";
     for(int e : ivec) {
