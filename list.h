@@ -96,6 +96,71 @@ public:
         return false;
     }
 
+    void remove_after(Node* it) {
+        if(first_ == nullptr || it == nullptr || it->next_ == nullptr) {
+            return ;
+        }
+
+        Node* tmp = it->next_;
+        it->next_ = tmp->next_;
+        delete(tmp);
+    }
+
+    void insert_after(Node* it, Node* node)
+    {
+        if(it == nullptr || node == nullptr || first_ == nullptr) {
+            return ;
+        }
+
+        Node* tmp = it->next_;
+        it->next_ = node;
+        node->next_ = tmp;
+    }
+
+    void remove_by_item(T item)
+    {
+        Node* it = first_;
+        while(it != nullptr) {
+            if(it->item_ == item) {
+                Node* tmp = it;
+                it = it->next_;
+                delete(tmp);
+            } else {
+                it = it->next_;
+            }
+        }
+    }
+
+    T max()
+    {
+        if(first_ == nullptr) {
+            return 0;
+        }
+
+        T maximun = first_->item_;
+        Node* it = first_;
+        while(it != nullptr) {
+            if(it->item_ > maximun) {
+                maximun = it->item_;
+            }
+            it = it->next_;
+        }
+
+        return maximun;
+    }
+
+    void reverse() {
+        Node* reverse = nullptr;
+        while(first_ != nullptr) {
+            Node* second = first_->next_;
+            first_->next_ = reverse;
+            reverse = first_;
+            first_ = second;
+        }
+        first_ = reverse;
+    }
+
+
 //    Node* push_back(T item);
 //    T pop_back();
 

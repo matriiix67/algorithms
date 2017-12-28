@@ -4,6 +4,9 @@ project(algorithms)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(test_list test_list.cpp list.h)
+add_executable(test_stack test_stack.cpp stack.h)
+add_executable(test_queue test_queue.cpp queue.h)
+add_executable(test_bag test_bag.cpp bag.h)
 
 add_executable(test_sort test_sort.cpp Sort.h Sort.cpp)
 add_executable(test_graph test_graph.cpp Graph.h Graph.cpp)
